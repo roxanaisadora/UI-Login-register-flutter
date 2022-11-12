@@ -1,6 +1,6 @@
 # sesion_04
 
-this proyect with ui.
+this proyect with UI login and register.
 
 ## Getting Started
 
