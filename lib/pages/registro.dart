@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:sesion_04/pages/forgot.dart';
 import 'package:sesion_04/pages/form.dart';
 
+
 class Registro extends StatelessWidget {
   const Registro({super.key});
 
@@ -129,7 +130,7 @@ class Registro extends StatelessWidget {
           ),
            ],
           ),
-          const SizedBox(height: 30),
+          const SizedBox(height: 70),
            MaterialButton(
                 height: 45,
                 padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
@@ -141,14 +142,14 @@ class Registro extends StatelessWidget {
                   style: TextStyle(color: Color.fromARGB(255, 247, 244, 244), fontSize: 18),
                 ),
                 onPressed: () {}),
-          const SizedBox(height: 30),
+          const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
            children: [
             const Text('Dont\'t have an account', style: TextStyle(color: Colors.white, fontSize: 16),),
              TextButton(
             style: TextButton.styleFrom(
-              textStyle: const TextStyle(fontSize: 20),
+              textStyle: const TextStyle(fontSize: 30),
             ),
             onPressed: () {
               Navigator.push(

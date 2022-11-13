@@ -12,34 +12,33 @@ class Formlogin extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(image: AssetImage('assets/fondo_2.jpg'),
-          fit: BoxFit.cover
-          )
-        ),
-        child: Padding(padding: const EdgeInsets.all(20.0),
+          fit: BoxFit.cover)
+          ),
+        child: Padding(padding: const EdgeInsets.only(top: 15, left: 25, right: 25, bottom: 25),
         child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children:  [
           Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-          IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.white,size: 35,),
-          tooltip: 'Menu',
-          onPressed: () {
-            Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const MyApp()));
-          },
-        ),
+            IconButton(
+            icon: const Icon(Icons.arrow_back, color: Colors.white,size: 35,),
+            tooltip: 'Menu',
+            onPressed: () {
+              Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const MyApp()));
+                },
+            ),
           ],
           ),
           SizedBox(
-            child: SingleChildScrollView(
               child:Column(
                 children: [
                   SizedBox(
-                    width: 110,
-                    height: 110,
+                    width: 100,
+                    height: 100,
                     child:Container(
                       decoration: const BoxDecoration(
                         image: DecorationImage(image: AssetImage('assets/icon.png'),
@@ -68,6 +67,7 @@ class Formlogin extends StatelessWidget {
           TextField(
             style: const TextStyle(color: Color.fromARGB(255, 248, 248, 248), fontSize: 20),
             decoration: InputDecoration(
+              contentPadding: const EdgeInsets.symmetric(vertical: 16),
                 labelText: 'Name',
                 hintText: "Enter your name",
                 hintStyle:const TextStyle(
@@ -101,8 +101,10 @@ class Formlogin extends StatelessWidget {
           ),
           const SizedBox(height: 15,),
            TextField(
+            keyboardType: TextInputType.emailAddress,
             style: const TextStyle(color: Color.fromARGB(255, 248, 248, 248), fontSize: 20),
             decoration: InputDecoration(
+              contentPadding: const EdgeInsets.symmetric(vertical: 16),
                 labelText: 'E-mail',
                 hintText: "Enter your E-mail",
                 hintStyle:const TextStyle(
@@ -140,6 +142,7 @@ class Formlogin extends StatelessWidget {
             obscureText: true,
             keyboardType: TextInputType.text,
             decoration: InputDecoration(
+              contentPadding: const EdgeInsets.symmetric(vertical: 16),
                 labelText: 'Password',
                 hintText: "Enter your password",
                 hintStyle:const TextStyle(
@@ -176,6 +179,7 @@ class Formlogin extends StatelessWidget {
             style: const TextStyle(color: Color.fromARGB(255, 248, 248, 248), fontSize: 20),
             keyboardType: TextInputType.datetime,
             decoration: InputDecoration(
+              contentPadding: const EdgeInsets.symmetric(vertical: 16),
                 labelText: 'Birthday',
                 hintText: "dd/mm/yyyy",
                 hintStyle:const TextStyle(
@@ -207,13 +211,13 @@ class Formlogin extends StatelessWidget {
                     ),
               ),
           ),
-          const SizedBox(height: 40,),
+          const SizedBox(height: 30,),
                 ],
               )
-            ),
+            
           ),
-           MaterialButton(
-                height: 45,
+          MaterialButton(
+                height: 35,
                 padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                 color: const Color.fromARGB(255, 109, 50, 122),
                 shape: RoundedRectangleBorder(
@@ -223,11 +227,9 @@ class Formlogin extends StatelessWidget {
                   style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
                 onPressed: () {}),
-
-          const SizedBox(height: 30),
+          const SizedBox(height: 10),
           const Text('Or create account using social media', style: TextStyle(color: Colors.white, fontSize: 16),),
           const SizedBox(height: 10),
-
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
            children: [
@@ -266,10 +268,13 @@ class Formlogin extends StatelessWidget {
            ],
           ),
 
+          
+
         ],
-        ),)
+        ),
+        )
+      ),
       
-      )
     );
   }
 }

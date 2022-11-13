@@ -14,15 +14,15 @@ class Forgot extends StatelessWidget {
           fit: BoxFit.cover
           )
         ),
-        child: Padding(padding: const EdgeInsets.all(20.0),
+        child: Padding(padding: const EdgeInsets.only(top: 20, left: 25, right: 25, bottom: 25),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            const SizedBox(height: 20,),
             Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
           IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.white,size: 40,),
+          icon: const Icon(Icons.arrow_back, color: Colors.white,size: 35,),
           tooltip: 'Menu',
           onPressed: () {
             Navigator.push(
@@ -33,7 +33,9 @@ class Forgot extends StatelessWidget {
             ),
           ],
           ),
-          SizedBox(
+          Column(
+            children: [
+              SizedBox(
             child: Image.asset(
               'assets/forgot.png',
               width: 150,
@@ -43,10 +45,9 @@ class Forgot extends StatelessWidget {
           ),
           const SizedBox(height: 50),
           const Text('Please enter your email address to recieve a verification card', style: TextStyle(color: Colors.white, fontSize: 16),),
-          SizedBox(
-            child: Column(children: [
-              const SizedBox(height: 40),
-           TextField(
+          const SizedBox(height: 20),
+              TextField(
+            keyboardType: TextInputType.emailAddress,
             style: const TextStyle(color: Color.fromARGB(255, 248, 248, 248), fontSize: 20),
             decoration: InputDecoration(
                 labelText: 'E-mail',
@@ -80,8 +81,8 @@ class Forgot extends StatelessWidget {
                     ),
               ),
           ),
-          const SizedBox(height: 40,),
-            ]),
+          const SizedBox(height: 180,),
+            ],
           ),
           MaterialButton(
                 height: 45,
@@ -94,7 +95,6 @@ class Forgot extends StatelessWidget {
                   style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
                 onPressed: () {}),
-                const SizedBox(height: 80,),
           ],
         ),
         ),
